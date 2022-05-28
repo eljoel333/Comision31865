@@ -1,6 +1,8 @@
 
 import './App.css';
 import NavBar from './components/NavBar';
+import Items from './components/Items';
+
 
 //importamos las pages
 
@@ -10,12 +12,11 @@ import Page3 from './container/Page3';
 
 function App() {
   return (
-    <div>
+    <div className='container'>
+      <h1>Mi logo</h1>
        <NavBar></NavBar>
-{/* 
-       <Page1></Page1>
-       <Page2></Page2>
-       <Page3></Page3> */}
+      <Items nombre='Mis Productos'></Items>
+
     </div>
   );
 }

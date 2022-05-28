@@ -1,17 +1,12 @@
 
-import OptionsMenu from '../container/ItemListContainer'; 
-
+import OptionsMenu from '../container/MenuList'; 
 
 export default function NavBar(){
 
     return (
+        <>
         <nav className='NavbarItems'> 
-               <h1 className='navbar-logo'>React <i className='fab fa-react'></i>
-
-               </h1>
-               <div className='menu-icon' >
-                   <i className='fas fa-bar'></i>
-               </div>
+              
                <ul className='nav-menu'>
                    {OptionsMenu.map((item,index)=>{
                        return (
@@ -21,6 +16,12 @@ export default function NavBar(){
                    )}
                   
                </ul>
+               <h1 className='navbar-logo'>Mi compra <i className='fa fa-solid fa-cart-arrow-down'></i></h1>
+                <div className='menu-icon' >
+                    <i className='fas fa-bar'></i>
+                </div>
         </nav>
+      
+        </>
     )
 }

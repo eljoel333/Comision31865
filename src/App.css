@@ -31,9 +31,26 @@
   list-style: none;
   text-align: center;
   width: 70vw;
-  justify-content: end;
+  justify-content: flex-start;
   margin-right: 2rem;
 }
+.nav-items{
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  grid-gap: 10px;
+  list-style: none;
+  text-align: center;
+  width: 70vw;
+  justify-content: flex-start;
+  margin-right: 2rem;
+}
+
+.nav-links-items{
+  color: rgb(11, 9, 9);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+}
+
 
 .nav-links{
   color: white;
@@ -57,4 +74,16 @@
 
 .men-icon{
   display: none;
+}
+
+.contenedorItems{
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(5, auto)
+
+
+}
+
+.tamanio{
+  width: 50%;
 }
