@@ -3,9 +3,7 @@ import { useState } from "react"
 const Counter = ({initial, stock, title}) =>{
     const [count, setCount] = useState(initial);
 
-    const decrement = () =>{
-        setCount(prev => prev - 1)
-    }
+    const decrement = () => setCount( count - 1);
 
     const increment =() =>{
         count < stock && setCount(count + 1); 

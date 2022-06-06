@@ -1,28 +1,32 @@
+import { useState, useEffect } from "react";
+import { getProductos } from "../container/ItemListContainer";
+import '../App.css';
 
-import ItemsList from '../container/ItemListContainer'; 
 
-export default function Items(props){
+console.log(getProductos());
 
-    return (
-        <>
-              <h1>{props.nombre}</h1>
+export default function Items(props) {
+  const [products, setProducts] = useState([]);
 
-        <div className=''> 
-               <ul className='nav-items' >
-                   {ItemsList.map((item,index)=>{
-                       return (
-                        <li key={index}> <a className={item.className} href={item.url}> {item.titulo}</a> 
-                            <img src={item.url} className='tamanio'></img>
+  useEffect(() => {
+    getProductos().then((response) => {
+      setProducts(response);
+    });
+  }, []);
 
-                        </li>
-                       )
-                   }
-                   )}
-                  
-               </ul>
-              
-        </div>
-      
-        </>
-    )
+  console.log(products);
+
+  return (
+    <>
+      <h1>Mis productos</h1>
+      <ul >
+        {products.map((prod) => (
+           <li key={prod.id}> <a className={prod.className} href={prod.url}> {prod.titulo}</a> 
+           <img src={prod.url} className='tamanio'></img>
+
+       </li>
+        ))}
+      </ul>
+    </>
+  );
 }

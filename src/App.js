@@ -11,6 +11,9 @@ function App() {
        <NavBar></NavBar>
       <Items nombre='Mis Productos'></Items>
       <item></item>
+      <h1>
+      MI CONTADOR
+      </h1>
      <Counter initial={1} stock={12} title='hola'></Counter>
 
     </div>
