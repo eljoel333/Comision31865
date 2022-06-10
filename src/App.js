@@ -1,21 +1,39 @@
+import React, {useState} from "react";
+import "./App.css";
+import NavBar from "./components/NavBar";
 
-import './App.css';
-import NavBar from './components/NavBar';
-import Items from './components/Items';
-import ItemList from './components/ItemList/ItemList';
-import Counter from './components/Counter/Counter';
+
+import {ProductosAPI, ProductosAPIByCategory} from './components/ProductosAPI/ProductosAPI';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+import {BrowserRouter, Routes, Route} from 'react-router-dom'; 
+
 function App() {
-  return (
-    <div className='container'>
-      <h1>Mi logo</h1>
-       <NavBar></NavBar>
-      <Items nombre='Mis Productos'></Items>
-      <item></item>
-      <h1>
-      MI CONTADOR
-      </h1>
-     <Counter initial={1} stock={12} title='hola'></Counter>
+// const [page, setPage] = useState('/detail/MLA1120156750');
+// // const [page, setPage] = useState({path:'detail', id:'MLA1120156750'});
 
+
+
+  return (
+    <div className="container">
+      {/* <h1>Mi logo</h1>
+      <NavBar></NavBar>
+      <div>
+        <button onClick={()=>setPage('list')}>List</button>
+        <button onClick={()=>setPage('detail')} >detail</button>
+      </div>
+      {page === 'list' && <ItemListContainer greeting='hola'></ItemListContainer>}
+      {page === 'detail' && <ItemDetailContainer></ItemDetailContainer>}
+     
+     <ProductosAPIByCategory categoria='laptop'></ProductosAPIByCategory> */}
+
+     <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<ItemListContainer greeting='hola'></ItemListContainer>} />
+        <Route path='/detail' element={<ItemDetailContainer />} />
+      </Routes>
+     </BrowserRouter>
+     
     </div>
   );
 }

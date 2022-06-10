@@ -1,29 +1,29 @@
 const OptionsMenu= [
     {
-        titulo:'Home',
+        titulo:'Celular',
         url:'#',
         className: 'nav-links'
     },
     {
-        titulo:'quienes somos',
+        titulo:'Tableta',
         url:'#',
         className: 'nav-links'
     },
     {
-        titulo:'nuestros productos',
+        titulo:'Notebook',
         url:'#',
         className: 'nav-links'
     },
-    {
-        titulo:'conocenos',
-        url:'#',
-        className: 'nav-links'
-    },
-    {
-        titulo:'registrate',
-        url:'#',
-        className: 'nav-links'
-    }
+    // {
+    //     titulo:'conocenos',
+    //     url:'#',
+    //     className: 'nav-links'
+    // },
+    // {
+    //     titulo:'registrate',
+    //     url:'#',
+    //     className: 'nav-links'
+    // }
 ]
 
 export default OptionsMenu; 
