@@ -1,4 +1,4 @@
-const ItemDetail = ({id, titulo}) => {
+const ItemDetail = ({id, title}) => {
     return (
             <>
                 <h2>
@@ -6,7 +6,7 @@ const ItemDetail = ({id, titulo}) => {
                 </h2>
                 <ul>
                     <li>
-                        {titulo}
+                        {title}
                     </li>
                 </ul>
             </>

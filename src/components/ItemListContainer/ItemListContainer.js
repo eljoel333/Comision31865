@@ -12,7 +12,7 @@ const ItemListContainer = (props) => {
             setProducts(response)
         })
     }, [])
-
+console.log('productodds', products)
     // const productsComponets = products.map(product => {
     //     return (
     //         <li key={product.id}>

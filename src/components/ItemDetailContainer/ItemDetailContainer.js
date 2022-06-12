@@ -1,15 +1,15 @@
 import { useEffect, useState } from "react";
-import { getProductsDefault } from "../../components/ProductosAPI/ProductosAPI";
+import { getProductsByCategory } from "../../components/ProductosAPI/ProductosAPI";
 import ItemDetail from "../ItemDetail/ItemDetail";
 
 
-const ItemDetailContainer = () =>{
+const ItemDetailContainer = (category) =>{
 
     const [productDetail, setProductDetail] = useState();
 
 
     useEffect(()=>{
-        getProductsDefault().then(respuesta=>{
+        getProductsByCategory('laptop').then(respuesta=>{
             setProductDetail(respuesta);
 
         })

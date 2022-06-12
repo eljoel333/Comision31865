@@ -7,7 +7,7 @@ export async function getProductsDefault() {
       const response = await fetch(`${API_URL+'bicicletas'}`);
       const data = await response.json();
       console.log(data.results);
-      return data;
+      return data.results;
     } catch (error) {
       console.error(error);
     }
