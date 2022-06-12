@@ -13,14 +13,7 @@ const ItemListContainer = (props) => {
         })
     }, [])
 console.log('productodds', products)
-    // const productsComponets = products.map(product => {
-    //     return (
-    //         <li key={product.id}>
-    //             {product.name}
-    //         </li>
-    //     )
-    // })
-
+   
     return (
         <div>
             <h1 className='Titulo'>{props.greeting}</h1>

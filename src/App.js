@@ -29,7 +29,7 @@ function App() {
 
      <BrowserRouter>
       <Routes>
-        <Route path='/' element={<ItemListContainer greeting='Bienvenidos'></ItemListContainer>} />
+        <Route path='/' element={<ItemListContainer greeting='Bienvenidos a mi Changarrito'></ItemListContainer>} />
         <Route path='/detail/:productId' element={<ItemDetailContainer />} />
       </Routes>
      </BrowserRouter>
